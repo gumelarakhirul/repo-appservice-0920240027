@@ -22,6 +22,12 @@ app.get('/profil', (req, res) => {
   });
 });
 
+app.get('/waktu', (req, res) => {
+  res.json({
+    serverTime: new Date().toISOString()
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server berjalan pada port ${port}`);
 });
